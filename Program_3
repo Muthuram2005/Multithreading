@@ -1,0 +1,48 @@
+class Th1 extends Thread { 
+    public void run() { 
+        try { 
+            sleep(1000); 
+            System.out.println("Name: Rohit"); 
+            System.out.println("Age: 30"); 
+        } catch (InterruptedException e) { 
+            e.printStackTrace(); 
+        } 
+    } 
+}                                                                                                                                                               
+class Th2 extends Thread { 
+    public void run() { 
+        try { 
+            sleep(2000); 
+            System.out.println("Class: B.Tech AIML"); 
+            System.out.println("College: MKCE"); 
+        } catch (InterruptedException e) { 
+            e.printStackTrace(); 
+        } 
+    } 
+} 
+class Th3 extends Thread  
+{ 
+    public void run()  
+  { 
+        try  
+     { 
+            sleep(3000); 
+            System.out.println("Place: Karur"); 
+            System.out.println("Area: Thalavapalayam"); 
+        }  
+catch (InterruptedException e)  
+     { 
+            e.printStackTrace(); 
+        } 
+    } 
+}                                                                                                                                                            
+class Main { 
+    public static void main(String args[]) { 
+        Th1 t1 = new Th1(); 
+        t1.start(); 
+        Th2 t2 = new Th2(); 
+        t2.start(); 
+        Th3 t3 = new Th3(); 
+        t3.start(); 
+    } 
+} 
